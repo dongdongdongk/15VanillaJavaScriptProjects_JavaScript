@@ -17,13 +17,13 @@ btns.forEach(function (btn){ // btns 의 각 값을 btn 으로 지정하고 사�
             count = 0;
         }
         if(count > 0){
-            value.style.color = "green"
+            value.style.color = "green";
         }
         if(count < 0) {
-            value.style.color = "red"
+            value.style.color = "red";
         }
-        if(count = 0) {
-            value.style.color = "black"
+        if(count === 0) {
+            value.style.color = "#222";
         }
         value.textContent = count;
     });
