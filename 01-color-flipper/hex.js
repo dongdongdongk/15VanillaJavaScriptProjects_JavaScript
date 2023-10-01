@@ -15,7 +15,7 @@ document.body.style.backgroundColor = hexColor;
 
 //랜덤한 hex 컬러 숫자 하나 생성(위의 hex 에서 랜덤한 )
 //Math.random() * hex.length ex) 0.349782 * 16 = 5.596512
-//Math.floor 내림으로  
+//Math.floor 내림으로 뒤에 소수점 제거 
 function getRandomNumber() { 
     return Math.floor(Math.random() * hex.length);
 }
