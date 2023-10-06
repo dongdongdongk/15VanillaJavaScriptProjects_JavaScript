@@ -43,7 +43,8 @@ const reviews = [
   // 현재 표시중인 리뷰의 인덱스 저장하는 변수 초기값 0으로 
   let currentItem = 0;
   
-  // 웹이 표시될 때 초기 리뷰 정보 표시 
+  // 웹이 표시될 때 초기 리뷰 정보 표시  
+  // window.addEventListener('DOMContentLoaded') html 로드 후 바로 실행 
   window.addEventListener('DOMContentLoaded', function () {
     const item = reviews[currentItem];
     img.src = item.img;
