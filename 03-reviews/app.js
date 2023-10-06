@@ -1,4 +1,5 @@
 // local reviews data
+// 리뷰 정보를 담고있는 배열 (지금 DB가 없으니..)
 const reviews = [
     {
       id: 1,
@@ -39,10 +40,10 @@ const reviews = [
   const nextBtn = document.querySelector('.next-btn');
   const randomBtn = document.querySelector('.random-btn');
   
-  // set starting item
+  // 현재 표시중인 리뷰의 인덱스 저장하는 변수 초기값 0으로 
   let currentItem = 0;
   
-  // load initial item
+  // 웹이 표시될 때 초기 리뷰 정보 표시 
   window.addEventListener('DOMContentLoaded', function () {
     const item = reviews[currentItem];
     img.src = item.img;
@@ -51,7 +52,7 @@ const reviews = [
     info.textContent = item.text;
   });
   
-  // show person based on item
+  // 리뷰 인덱스에 해당하는 리뷰 정보를 화면에 표시
   function showPerson(person) {
     const item = reviews[person];
     img.src = item.img;
@@ -59,15 +60,15 @@ const reviews = [
     job.textContent = item.job;
     info.textContent = item.text;
   }
-  // show next person
+  // 다음사람 보기 (currentItem 의 인덱스가 전체 길이보다 커지는걸 방지 리뷰가 순환할 수 있도록 )
   nextBtn.addEventListener('click', function () {
     currentItem++;
     if (currentItem > reviews.length - 1) {
       currentItem = 0;
     }
-    showPerson(currentItem);
+    showPerson(currentItem); // 리뷰 표시 
   });
-  // show prev person
+  // 전 사람 보기 
   prevBtn.addEventListener('click', function () {
     currentItem--;
     if (currentItem < 0) {
@@ -75,7 +76,7 @@ const reviews = [
     }
     showPerson(currentItem);
   });
-  // show random person
+  // 랜덤하게 사람표시 
   randomBtn.addEventListener('click', function () {
     console.log('hello');
   
