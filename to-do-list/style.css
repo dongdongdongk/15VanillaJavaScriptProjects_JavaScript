@@ -69,3 +69,8 @@ body {
 .list li.checked .fa-calendar-check {
    color: darkgray; 
 }
+
+.mainImage {
+    position: absolute;
+    top: 30px;
+}
