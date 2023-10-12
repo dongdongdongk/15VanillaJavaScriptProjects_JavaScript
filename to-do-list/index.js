@@ -52,13 +52,15 @@ function toDoList(work) {
 }
 
 function updateLocalStorage(){
-    const liEls = document.querySelectorAll("li");
-    let list = []
+    const liEls = document.querySelectorAll("li"); // 모든 li 요소를 선택 이를 liEls 변수에 할당
+    let list = [] // 변수를 빈 배열로 초기화 이 배열은 로컬 스토리지에 저장할 데이터를 담는 데 사용
     liEls.forEach(liEl =>{
         list.push({
             name : liEl.innerText,
-            checked : liEl.classList.contains("checked")
+            checked : liEl.classList.contains("checked") // class 중에 checked 가 있는지 확인 있으면 true checked 에 저장 
         })
     })
-    localStorage.setItem("list",JSON.stringify(list))
+    localStorage.setItem("list",JSON.stringify(list)) // 로컬 스토리지에 "list"라는 키로 데이터를 저장
+    // list 배열에 저장된 정보를 JSON 형식으로 문자열로 변환(JSON.stringify(list))한 후, 이 문자열을 "list" 키와 함께 로컬 스토리지에 저장
+    // 로컬 스토리지는 텍스트 데이터만을 저장할 수 있다
 }
