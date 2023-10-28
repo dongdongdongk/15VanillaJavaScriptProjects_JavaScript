@@ -6,3 +6,40 @@
 ul.cards li {
     list-style-type: none;
 }
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: greenyellow;
+}
+
+.wrapper{
+    height: 400px;
+    width: 400px;
+    background: white;
+    border-radius: 10px;
+}
+
+.cards, .card, .view{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cards{
+    height: 100%;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.cards .card{
+    cursor: pointer;
+    height: calc(100% / 4 - 10px);
+    width: calc(100% / 4 - 10px);
+}
+
+.card .front-view{
+    display: none;
+}
